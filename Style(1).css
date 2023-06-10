@@ -1,0 +1,263 @@
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Variables */
+:root{
+    --home-height:600px;
+}
+
+/* Body */
+body{
+    background-color: black;
+}
+body::before{
+    content: "";
+    background-image: url(Images/Body-Bg.jpg);
+    background-size: cover;
+    position: fixed;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+@media screen and (max-width: 768px){
+    #navbar{
+        flex-direction: column;
+    }
+}
+#logo{
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+#logo img{
+    height: 60px;
+    margin-left: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+#logo span{
+    color: orange;
+}
+.web-name{
+    padding: 0px 20px;
+    font-size: 1.1rem;
+}
+#navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 10px 0px;
+}
+#navbar a{
+    margin: 20px;
+    padding: 0px 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 1000;
+}
+#navbar a:hover{
+    color: orange;
+}
+
+/* Home Section */
+#home::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+}
+#home::after{
+    content: "";
+    background-image: url(Images/Home-Bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: white;
+    height: 90vh;
+    min-height: 500px;
+}
+#home p{
+    margin-top: 25px;
+    margin-bottom: 15px;
+    width: 60%;
+}
+#home .btn{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 22px;
+}
+.btn a{
+    text-decoration: none;
+    color: orange;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+#home .btn:hover{
+    transform: scale(1.1);
+}
+
+/* Services section */
+#services-bg{
+    padding: 20px;
+    background-color: white;
+}
+#services{
+    display: flex;
+    justify-content: space-between;
+}
+#services .box img{
+    width: 15vw;
+    height: 15vw;
+}
+#services .box{
+    width: 30vw;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+#services .box p{
+    text-align: justify;
+}
+
+/* Client section */
+#clients-bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+#clients{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.client-section img{
+    width: 100px;
+    margin: 20px 40px;
+}
+
+/* About Us section */
+#About-bg{
+    padding: 20px;
+    background-color: white;
+}
+#About{
+    display: flex;
+    justify-content: space-between;
+}
+#About .box img{
+    width: 15vw;
+    height: 15vw;
+}
+#About .box{
+    width: 30vw;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+#About .box p{
+    text-align: justify;
+}
+
+/* Contact Us section */
+#contact-bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+}
+#contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#contact form{
+    width: 50%;
+}
+#contact .form-group{
+    margin: 20px 0px;
+    font-size: 1.2rem;
+}
+#contact input{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 7.5px;
+    border-radius: 10px;
+}
+#contact textarea{
+    width: 100%;
+    margin-top: 10px;
+    padding: 7.5px;
+    border-radius: 10px;
+    resize: none;
+}
+/* Utilities */
+.h-primary{
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 5rem;
+}
+.h-secondary{
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 3.5rem;
+}
+.h-third{
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 2rem;
+}
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 1rem;
+}
+#footer{
+    background-color: white;
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    color: black;
+}
